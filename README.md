@@ -4,7 +4,7 @@
 Sound Recorder is a free web application which allows any audio creator to easily edit a simple audio project.
 
 ## Team Members
-Bradley Henderson
+Brad Hendrickson
 
 James Keirnan
 
