@@ -1,0 +1,18 @@
+.indexmenu {
+  background-color: #282828 !important;
+}
+
+.abouttab.tab {
+  border: 0;
+  box-shadow: none;
+}
+
+.aboutgrid.grid {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.footer.grid {
+  background-color: #282828;
+  color: whitesmoke;
+}
