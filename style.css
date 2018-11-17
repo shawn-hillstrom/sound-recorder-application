@@ -1,19 +1,18 @@
-body {
-  background-color: #282828;
-}
-
 .indexmenu {
-  background-color: #282828 !important;
-}
-
-.welcometab.tab {
-  border: 0;
-  box-shadow: none;
   background-color: #282828 !important;
 }
 
 .abouttab.tab {
   border: 0;
   box-shadow: none;
-  background-color:
+}
+
+.aboutgrid.grid {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.footer.grid {
+  background-color: #282828;
+  color: whitesmoke;
 }
