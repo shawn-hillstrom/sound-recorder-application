@@ -10,5 +10,34 @@
 </head>
 <body>
 
+<div class="ui secondary fixed inverted pointing massive indexmenu menu">
+  <div class="item">
+    <div class="ui inverted huge header">Sound Recorder</div>
+  </div>
+  <a class="active item" data-tab="welcome">
+    Welcome
+  </a>
+  <a class="item" data-tab="about">
+    About
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <a href="main.html" class="ui inverted massive button">New Project</a>
+    </div>
+  </div>
+</div>
+
+<div class="ui active welcometab tab segment" data-tab="welcome">
+  <img class="ui image" src="welcomeimage.jpg">
+</div>
+
+<div class="ui tab segment" data-tab="about">
+
+</div>
+
+<script>
+  $('.menu .item').tab();
+</script>
+
 </body>
 </html>
