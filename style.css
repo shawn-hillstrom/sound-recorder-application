@@ -12,7 +12,19 @@
   padding-bottom: 75px;
 }
 
+.ui.howgrid.relaxed.grid {
+  color: whitesmoke;
+}
+
+h1.ui.centered.huge.dividing.header {
+    color: whitesmoke;
+}
+
+h3.ui.small.header {
+    color: whitesmoke;
+}
+
 .footer.grid {
-  background-color: #282828;
+  background-color: #0F0F0F;
   color: whitesmoke;
 }
