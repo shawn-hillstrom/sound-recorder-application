@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"Sound_Recorder_Page\");\nTemplate[\"Sound_Recorder_Page\"] = new Template(\"Template.Sound_Recorder_Page\", (function() {\n  var view = this;\n  return \"\";\n}));\n","bodyAttrs":{}}
