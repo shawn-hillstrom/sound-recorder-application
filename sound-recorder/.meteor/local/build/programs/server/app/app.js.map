@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/imports/api/index.js","meteor://💻app/server/main.js"],"names":["module","link"],"mappings":";;;;;;;;;;;;;;;;;;AAAAA,MAAM,CAACC,IAAP,CAAY,SAAZ,E;;;;;;;;;;;ACAAD,MAAM,CAACC,IAAP,CAAY,cAAZ,E","file":"/app.js","sourcesContent":["import './db.js';\n","import '/imports/api';\n"]}
