@@ -16,6 +16,14 @@
   color: whitesmoke;
 }
 
+.ui.buttongrid.relaxed.grid {
+  color: whitesmoke;
+}
+
+i.circle.icon {
+  color: red;
+}
+
 h1.ui.centered.huge.dividing.header {
   color: whitesmoke;
 }
