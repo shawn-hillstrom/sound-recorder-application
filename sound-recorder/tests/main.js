@@ -1,5 +1,6 @@
 import assert from "assert";
 
+/* Basic Tests */
 describe("sound-recorder", function () {
   it("package.json has correct name", async function () {
     const { name } = await import("../package.json");
@@ -18,3 +19,6 @@ describe("sound-recorder", function () {
     });
   }
 });
+
+/* Channel Selection Test */
+
