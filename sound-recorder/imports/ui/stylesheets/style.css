@@ -1,0 +1,84 @@
+.indexmenu {
+  background-color: #282828 !important;
+}
+
+.abouttab.tab {
+  border: 0;
+  box-shadow: none;
+}
+
+.aboutgrid.grid {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.ui.howgrid.relaxed.grid {
+  color: whitesmoke;
+}
+
+h1.ui.centered.huge.dividing.header {
+  color: whitesmoke;
+}
+
+h3.ui.small.header {
+  color: whitesmoke;
+}
+
+.footer.grid {
+  background-color: #282828;
+  color: whitesmoke;
+}
+
+
+
+
+.ui.timebar {
+  width: 100%;
+  color: whitesmoke;
+  text-align: left;
+  padding-top: 10px;
+  height: 2.5em;
+  align: left;
+  padding-left: 25px;
+
+}
+
+.ui.timebar.item {
+  width: 6.25%;
+  border: 2px lightgray;
+}
+
+.timelinegrid {
+  height: 89%;
+  background-color: #282828;
+}
+
+.ui.chanlabel {
+  padding-left: 5px;
+  border: 2px black;
+  margin: 0;
+  width: 20px;
+  height: 100%;
+  background-color:#282828;
+  color:whitesmoke;
+
+}
+
+.ui.channel {
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+  background-color: #cccccc;
+}
+
+.ui.buttongrid.relaxed.grid {
+  color: whitesmoke;
+}
+
+.ui.button {
+  background-color: whitesmoke;
+}
+
+i.circle.icon {
+  color: red;
+}
