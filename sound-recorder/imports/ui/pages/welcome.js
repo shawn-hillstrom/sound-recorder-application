@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 
-// Allow functionality for tabs.
+/* Tab Functionality */
 Template.Welcome_Page.onRendered(function enableTabbing() {
   this.$('.menu .item').tab();
 });

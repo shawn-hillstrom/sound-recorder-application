@@ -19,6 +19,3 @@ describe("sound-recorder", function () {
     });
   }
 });
-
-/* Channel Selection Test */
-
