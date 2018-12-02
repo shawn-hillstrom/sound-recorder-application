@@ -1,6 +1,9 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
+  
+var audio = new Audio('sounds/mystery.mp3');
+
 /* On Created */
 Template.Sound_Recorder_Page.onCreated(function recorderCreated() {
   this.selectedChannel = new ReactiveVar(0);
@@ -65,6 +68,8 @@ Template.Sound_Recorder_Page.events({
   },
   /* Play Button Pushed */
   'click #play': function(event, instance) {
+	audio.play();
+	
     instance.isPlaying.set(true);
     while (!instance.$('#timeline').progress('complete') && instance.isPlaying.get()) {
       wait(1000); // Wait one second.
@@ -78,6 +83,7 @@ Template.Sound_Recorder_Page.events({
   },
   /* Stop Button Clicked */
   'click #stop': function(event, instance) {
+  audio.pause();
 
   },
   /* Clear Button Clicked */
