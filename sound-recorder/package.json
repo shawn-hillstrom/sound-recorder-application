@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "autoprefixer": "^6.3.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -27,6 +28,17 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-meteor": "^5.1.0",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "postcss": "^6.0.22",
+    "postcss-load-config": "^1.2.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
   }
 }
