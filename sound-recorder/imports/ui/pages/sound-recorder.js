@@ -5,12 +5,11 @@ import { ReactiveVar } from 'meteor/reactive-var';
 Template.Sound_Recorder_Page.onCreated(function recorderCreated() {
   this.selectedChannel = new ReactiveVar(0);
   this.isPlaying = new ReactiveVar(false);
-  this.currentPosition = new ReactiveVar(0);
 });
 
 /* On Rendered */
 Template.Sound_Recorder_Page.onRendered(function recorderRendered() {
-  this.$('#timeline').progress();
+  this.$('.ui.progress').progress();
 });
 
 /* Helper Functions */
@@ -21,17 +20,21 @@ Template.Sound_Recorder_Page.helpers({
   isPlaying() {
     return Template.instance().isPlaying.get();
   },
-  currentPosition() {
-    return Template.instance().currentPosition.get();
-  },
-  wait(ms) {
-    let d = new Date();
-    let d2 = null;
-    do {
-      d2 = new Date();
-    } while (d2 - d < ms);
-  },
 });
+
+/* Function: wait
+ * --------------
+ * Waits a specified amount of milliseconds.
+ *
+ * ms: Milliseconds.
+ */
+function wait(ms) {
+  let d = new Date();
+  let d2 = null;
+  do {
+    d2 = new Date();
+  } while (d2 - d < ms);
+}
 
 /* Events */
 Template.Sound_Recorder_Page.events({
@@ -62,7 +65,12 @@ Template.Sound_Recorder_Page.events({
   },
   /* Play Button Pushed */
   'click #play': function(event, instance) {
-    instance.currentPosition.set(20);
+    instance.isPlaying.set(true);
+    while (!instance.$('#timeline').progress('complete') && instance.isPlaying.get()) {
+      wait(1000); // Wait one second.
+      instance.$('#timeline').progress('increment');
+    }
+    instance.isPlaying.set(false);
   },
   /* Record Button Clicked */
   'click #record': function(event, instance) {
