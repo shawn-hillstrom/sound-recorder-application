@@ -1,77 +1,76 @@
 <template name="Sound_Recorder_Page" style="background-color:#282828">
-    <div class="ui timegrid relaxed grid">
-        <div class="centered row" style="height: 45px; background-color:#282828">
-            <div class="ui timebar relaxed big horizontal list">
-                <div class="item">0:00:00</div>
-                <div class="item">0:00:01</div>
-                <div class="item">0:00:02</div>
-                <div class="item">0:00:03</div>
-                <div class="item">0:00:04</div>
-                <div class="item">0:00:05</div>
-                <div class="item">0:00:06</div>
-                <div class="item">0:00:07</div>
-                <div class="item">0:00:08</div>
-                <div class="item">0:00:09</div>
-                <div class="item">0:00:10</div>
-                <div class="item">0:00:11</div>
-                <div class="item">0:00:12</div>
-                <div class="item">0:00:13</div>
-                <div class="item">0:00:14</div>
-                <div class="item">0:00:15</div>
-                <div class="item">0:00:16</div>
-                <div class="item">0:00:17</div>
-            </div>
-        </div>
-        <div class="ui big bottom attached progress" style="background-color: #282828; width: 100%; height: 10px">
-            <div class="bar"></div>
-        </div>
+  <div class="ui timegrid relaxed grid">
+    <div class="centered row" style="height: 45px; background-color:#282828">
+      <div class="ui timebar relaxed big horizontal list">
+        <div class="item">0:00:00</div>
+        <div class="item">0:00:10</div>
+        <div class="item">0:00:20</div>
+        <div class="item">0:00:30</div>
+        <div class="item">0:00:40</div>
+        <div class="item">0:00:50</div>
+        <div class="item">0:01:00</div>
+        <div class="item">0:01:10</div>
+        <div class="item">0:01:20</div>
+        <div class="item">0:01:30</div>
+        <div class="item">0:01:40</div>
+        <div class="item">0:01:50</div>
+        <div class="item">0:02:00</div>
+        <div class="item">0:02:10</div>
+        <div class="item">0:02:20</div>
+        <div class="item">0:02:30</div>
+        <div class="item">0:02:40</div>
+      </div>
     </div>
-    <div class="ui timelinegrid five row grid">
-        <div class="ui channel row">
-            <div class="ui chanlabel one wide left column">
-                1
-            </div>
-            <div class="bar" style="width:100%"></div>
-        </div>
-        <div class="ui channel row">
-            <div class="ui chanlabel one wide left column">
-                2
-            </div>
-        </div>
-        <div class="ui channel row">
-            <div class="ui chanlabel one wide left column">
-                3
-            </div>
-        </div>
-        <div class="ui channel row">
-            <div class="ui chanlabel one wide left column">
-                4
-            </div>
-        </div>
-        <div class="ui channel row">
-            <div class="ui chanlabel one wide left column">
-                5
-            </div>
-        </div>
+    <div class="ui timeline big bottom attached progress" data-value="0" data-total="60" id="timeline">
+      <div class="bar"></div>
     </div>
-    <div class="ui buttongrid relaxed grid">
-        <div class="centered row" style="background-color:#282828">
-            <button class="ui labeled icon button">
-                <i class="play icon"></i>
-                <b>PLAY</b>
-            </button>
-            <button class="ui labeled icon button">
-                <i class="circle icon"></i>
-                <b>RECORD</b>
-            </button>
-            <button class="ui labeled icon button">
-                <i class="square icon"></i>
-                <b>STOP</b>
-            </button>
-            <button class="ui labeled icon button">
-                <i class="trash icon"></i>
-                <b>CLEAR CHANNEL</b>
-            </button>
-        </div>
+  </div>
+  <div class="ui timelinegrid five row grid">
+    <div class="ui channel row button" tabindex="0" id="channel_one">
+      <div class="ui chanlabel one wide left column">
+        1
+      </div>
+      <div class="bar" style="width:100%"></div>
     </div>
+    <div class="ui channel row button" tabindex="0" id="channel_two">
+      <div class="ui chanlabel one wide left column">
+        2
+      </div>
+    </div>
+    <div class="ui channel row button" tabindex="0" id="channel_three">
+      <div class="ui chanlabel one wide left column">
+        3
+      </div>
+    </div>
+    <div class="ui channel row button" tabindex="0" id="channel_four">
+      <div class="ui chanlabel one wide left column">
+        4
+      </div>
+    </div>
+    <div class="ui channel row button" tabindex="0" id="channel_five">
+      <div class="ui chanlabel one wide left column">
+        5
+      </div>
+    </div>
+  </div>
+  <div class="ui buttongrid relaxed grid">
+    <div class="centered row" style="background-color:#282828">
+      <button class="ui labeled icon button" id="play">
+        <i class="play icon"></i>
+        <b>PLAY</b>
+      </button>
+      <button class="ui labeled icon button" id="record">
+        <i class="circle icon"></i>
+        <b>RECORD</b>
+      </button>
+      <button class="ui labeled icon button" id="stop">
+        <i class="square icon"></i>
+        <b>STOP</b>
+      </button>
+      <button class="ui labeled icon button" id="clear">
+        <i class="trash icon"></i>
+        <b>CLEAR CHANNEL</b>
+      </button>
+    </div>
+  </div>
 </template>
