@@ -14,7 +14,7 @@ navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
       track1.src = URL.createObjectURL(blob);
       track1.controls=true;
       track1.autoplay=true;
-      track1.href = recordedAudio.src;
+      track1link.href = track1.src;
       track1link.download = 'mp3';
       track1link.innerHTML = 'download';
     }
