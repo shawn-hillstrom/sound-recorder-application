@@ -2,12 +2,12 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import '/client/lib/semantic-ui/definitions/modules/progress.js';
 
-var audio = new Audio('sounds/mystery.mp3');
+let audio = new Audio('sounds/mystery.mp3');
 let audioChunks;
 
 // Get access to the mic
 navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
-  rec = new MediaRecorder(stream);
+  let rec = new MediaRecorder(stream);
   rec.ondataavailable = e => {
     audioChunks.push(e.data);
     if (rec.state == "inactive"){
@@ -75,9 +75,13 @@ Template.Sound_Recorder_Page.events({
     instance.selectedChannel.set(5);
     // console.log(event, "Selected channel " + instance.selectedChannel.get());
   },
-  /* Play Button Pushed */
+  /* Play Button Clicked */
   'click #play': function(event, instance) {
     audio.play();
+  },
+  /* Pause Button Clicked */
+  'click #pause': function(event, instance) {
+
   },
   /* Record Button Clicked */
   'click #record': function(event, instance) {
