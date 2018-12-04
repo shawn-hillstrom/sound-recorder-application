@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import '/client/lib/semantic-ui/definitions/modules/progress.js';
 
 //demo sound, to be removed at some point
 var audio = new Audio('sounds/mystery.mp3');
@@ -60,21 +61,12 @@ function recordToTrack5(blob) {
 /* On Created */
 Template.Sound_Recorder_Page.onCreated(function recorderCreated() {
   this.selectedChannel = new ReactiveVar(0);
-  this.isPlaying = new ReactiveVar(false);
-});
-
-/* On Rendered */
-Template.Sound_Recorder_Page.onRendered(function recorderRendered() {
-  this.$('.ui.progress').progress();
 });
 
 /* Helper Functions */
 Template.Sound_Recorder_Page.helpers({
   selectedChannel() {
     return Template.instance().selectedChannel.get();
-  },
-  isPlaying() {
-    return Template.instance().isPlaying.get();
   },
 });
 
@@ -124,15 +116,13 @@ Template.Sound_Recorder_Page.events({
     selectedChannel = 5;
     // console.log(event, "Selected channel " + instance.selectedChannel.get());
   },
-  /* Play Button Pushed */
+  /* Play Button Clicked */
   'click #play': function(event, instance) {
     audio.play();
-    instance.isPlaying.set(true);
-    while (!instance.$('#timeline').progress('complete') && instance.isPlaying.get()) {
-      wait(1000); // Wait one second.
-      instance.$('#timeline').progress('increment');
-    }
-    instance.isPlaying.set(false);
+  },
+  /* Pause Button Clicked */
+  'click #pause': function(event, instance) {
+
   },
   /* Record Button Clicked */
   'click #record': function(event, instance) {
