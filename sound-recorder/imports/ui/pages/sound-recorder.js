@@ -126,11 +126,26 @@ Template.Sound_Recorder_Page.events({
   },
   /* Play Button Clicked */
   'click #play': function(event, instance) {
-    audio.play();
-  },
+    track1.play();
+    track2.play();
+    track3.play();
+    track4.play();
+    track5.play();
+    track1.addEventListener('stop', function(e) {
+    track1.play();
+    });
+    },
+  /* Track 1 ends
+
+    if (track1.readyState === 'ended') track1.play();
+*/
   /* Pause Button Clicked */
   'click #pause': function(event, instance) {
-
+    track1.pause();
+    track2.pause();
+    track3.pause();
+    track4.pause();
+    track5.pause();
   },
   /* Record Button Clicked */
   'click #record': function(event, instance) {
@@ -140,6 +155,11 @@ Template.Sound_Recorder_Page.events({
   /* Stop Button Clicked */
   'click #stop': function(event, instance) {
     rec.stop();
+    track1.stop();
+    track2.stop();
+    track3.stop();
+    track4.stop();
+    track5.stop();
   },
   /* Clear Button Clicked */
   'click #clear': function(event, instance) {

@@ -69,6 +69,10 @@
   background-color: #cccccc;
 }
 
+.audio {
+  height: 100%;
+}
+
 .ui.buttongrid.relaxed.grid {
   color: whitesmoke;
 }

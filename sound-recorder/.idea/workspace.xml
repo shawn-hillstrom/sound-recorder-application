@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85a18fd4-62bd-43dc-9261-0f17644d5fd2" name="Default Changelist" comment="">
+    <list default="true" id="85a18fd4-62bd-43dc-9261-0f17644d5fd2" name="Default Changelist" comment="made &quot;clear channel&quot; function work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/pages/sound-recorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/pages/sound-recorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/pages/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/pages/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/stylesheets/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,73 +13,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-2135762155">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="2" />
-          <entry key="js" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="ESLintLanguageService" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="148" />
-          <entry key="js" value="1225" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="148" />
-          <entry key="JavaScript" value="1225" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/sound-recorder.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="165">
+              <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/sound-recorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="165" column="28" lean-forward="true" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
+            <state relative-caret-position="129">
+              <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -86,8 +51,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/pages/welcome.html">
+        <entry file="file://$PROJECT_DIR$/imports/api/db.js">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/api/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/pages/welcome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -100,37 +87,31 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>audioDow</find>
+      <find>audio</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jameskeirnan &lt;43251907+jameskeirnan@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/imports/ui/pages/sound-recorder.html" />
+        <option value="$PROJECT_DIR$/imports/ui/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/imports/ui/pages/sound-recorder.js" />
+        <option value="$PROJECT_DIR$/imports/ui/pages/welcome.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+    <option name="x" value="660" />
     <option name="width" value="960" />
-    <option name="height" value="1056" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -140,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -167,25 +147,19 @@
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sound-recorder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sound-recorder" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543915619850" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544038650427" />
     <property name="js.meteor.library.cached" value="$PROJECT_DIR$/.meteor" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js.meteor.project" value="true" />
@@ -227,13 +201,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7082000" />
+    <option name="totallyTimeSpent" value="11675000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="-1" width="1926" height="1060" extended-state="6" />
+    <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -265,20 +239,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/imports/ui/pages/sound-recorder.js</url>
-          <line>157</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="made &quot;clear channel&quot; function work" />
+    <option name="LAST_COMMIT_MESSAGE" value="made &quot;clear channel&quot; function work" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -286,33 +249,42 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/welcome.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/welcome.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/sound-recorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="165">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/sound-recorder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="165" column="28" lean-forward="true" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
+        <state relative-caret-position="129">
+          <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
