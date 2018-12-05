@@ -1,9 +1,6 @@
 import { Template } from 'meteor/templating';
 import '/client/lib/semantic-ui/definitions/modules/progress.js';
 
-//[[REMOVE]]
-//var audio = new Audio('sounds/mystery.mp3');
-
 /* Variables */
 let audioChunks; // Variable to store recorded chunks of audio.
 let selectedChannel = 1; // Variable to store the last clicked channel.
