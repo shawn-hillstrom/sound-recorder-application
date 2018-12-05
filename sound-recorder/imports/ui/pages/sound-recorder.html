@@ -1,88 +1,44 @@
 <template name="Sound_Recorder_Page" style="background-color:#282828">
-  <div class="ui timegrid relaxed grid">
-    <div class="centered row" style="height: 45px; background-color:#282828">
-      <div class="ui timebar relaxed big horizontal list">
-        <div class="item">0:00:00</div>
-        <div class="item">0:00:10</div>
-        <div class="item">0:00:20</div>
-        <div class="item">0:00:30</div>
-        <div class="item">0:00:40</div>
-        <div class="item">0:00:50</div>
-        <div class="item">0:01:00</div>
-        <div class="item">0:01:10</div>
-        <div class="item">0:01:20</div>
-        <div class="item">0:01:30</div>
-        <div class="item">0:01:40</div>
-        <div class="item">0:01:50</div>
-        <div class="item">0:02:00</div>
-        <div class="item">0:02:10</div>
-        <div class="item">0:02:20</div>
-        <div class="item">0:02:30</div>
-        <div class="item">0:02:40</div>
-        <div class="item">0:03:00</div>
-      </div>
-    </div>
-    <div class="ui timeline big bottom attached progress" data-value="0" data-total="60" id="timeline">
-      <div class="bar"></div>
-    </div>
-  </div>
-  <div class="ui timelinegrid five row grid">
+  <div class="topbar"></div>
+  <div class="ui five row changrid grid">
     <div class="ui channel row button" tabindex="0" id="channel_one">
-      <div class="ui chanlabel one wide left column">
-        1
-      </div>
-
+      <div class="ui one wide left chanlabel column">1</div>
       <div>
         <audio id="track1"></audio>
         <a id="track1link"></a>
       </div>
-
-
-      <div class="bar" style="width:100%"></div>
     </div>
     <div class="ui channel row button" tabindex="0" id="channel_two">
-      <div class="ui chanlabel one wide left column">
-        2
-      </div>
-
+      <div class="ui one wide left chanlabel column">2</div>
       <div>
         <audio id="track2"></audio>
         <a id="track2link"></a>
       </div>
-
     </div>
     <div class="ui channel row button" tabindex="0" id="channel_three">
-      <div class="ui chanlabel one wide left column">
-        3
-      </div>
+      <div class="ui one wide left chanlabel column">3</div>
       <div>
         <audio id="track3"></audio>
         <a id="track3link"></a>
       </div>
-
     </div>
     <div class="ui channel row button" tabindex="0" id="channel_four">
-      <div class="ui chanlabel one wide left column">
-        4
-      </div>
+      <div class="ui one wide left chanlabel column">4</div>
       <div>
         <audio id="track4"></audio>
         <a id="track4link"></a>
       </div>
-
     </div>
     <div class="ui channel row button" tabindex="0" id="channel_five">
-      <div class="ui chanlabel one wide left column">
-        5
-      </div>
+      <div class="ui one wide left chanlabel column">5</div>
       <div>
         <audio id="track5"></audio>
         <a id="track5link"></a>
       </div>
     </div>
   </div>
-  <div class="ui buttongrid relaxed grid">
-    <div class="centered row" style="background-color:#282828">
+  <div class="ui relaxed bottombar grid">
+    <div class="centered row">
       <button class="ui labeled icon button" id="play">
         <i class="play icon"></i>
         <b>PLAY</b>
