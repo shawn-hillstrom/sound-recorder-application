@@ -1,18 +1,14 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
 import '/client/lib/semantic-ui/definitions/modules/progress.js';
 
-//demo sound, to be removed at some point
-var audio = new Audio('sounds/mystery.mp3');
+//[[REMOVE]]
+//var audio = new Audio('sounds/mystery.mp3');
 
-//variable to store recorded chunks of audio
-let audioChunks;
-//variable to store the last clicked channel
-let selectedChannel = 1;
+/* Variables */
+let audioChunks; // Variable to store recorded chunks of audio.
+let selectedChannel = 1; // Variable to store the last clicked channel.
 
-// I fully understand that this is a monstrosity
-// sry in advance. we need to fix somewhat
-
+/* Record to Channel 1 */
 function recordToTrack1(blob) {
   track1.src = URL.createObjectURL(blob);
   track1.controls = true;
@@ -22,6 +18,7 @@ function recordToTrack1(blob) {
   track1link.innerHTML = 'download';
 }
 
+/* Record to Channel 2 */
 function recordToTrack2(blob) {
   track2.src = URL.createObjectURL(blob);
   track2.controls = true;
@@ -31,6 +28,7 @@ function recordToTrack2(blob) {
   track2link.innerHTML = 'download';
 }
 
+/* Record to Channel 3 */
 function recordToTrack3(blob) {
   track3.src = URL.createObjectURL(blob);
   track3.controls = true;
@@ -40,6 +38,7 @@ function recordToTrack3(blob) {
   track3link.innerHTML = 'download';
 }
 
+/* Record to Channel 4 */
 function recordToTrack4(blob) {
   track4.src = URL.createObjectURL(blob);
   track4.controls = true;
@@ -49,6 +48,7 @@ function recordToTrack4(blob) {
   track4link.innerHTML = 'download';
 }
 
+/* Record to Channel 5 */
 function recordToTrack5(blob) {
   track5.src = URL.createObjectURL(blob);
   track5.controls = true;
@@ -58,74 +58,50 @@ function recordToTrack5(blob) {
   track5link.innerHTML = 'download';
 }
 
+/* Delete a Track in Specified Channel */
 function deleteTrack(selectedChannel) {
-  if (selectedChannel === 1) track1.setAttribute('src', '');
-  if (selectedChannel === 2) track2.setAttribute('src', '');
-  if (selectedChannel === 3) track3.setAttribute('src', '');
-  if (selectedChannel === 4) track4.setAttribute('src', '');
-  if (selectedChannel === 5) track5.setAttribute('src', '');
-}
-
-/* On Created */
-Template.Sound_Recorder_Page.onCreated(function recorderCreated() {
-  this.selectedChannel = new ReactiveVar(0);
-});
-
-/* Helper Functions */
-Template.Sound_Recorder_Page.helpers({
-  selectedChannel() {
-    return Template.instance().selectedChannel.get();
-  },
-});
-
-/* Function: wait
- * --------------
- * Waits a specified amount of milliseconds.
- *
- * ms: Milliseconds.
- */
-function wait(ms) {
-  let d = new Date();
-  let d2 = null;
-  do {
-    d2 = new Date();
-  } while (d2 - d < ms);
+  if (selectedChannel === 1) {
+    track1.setAttribute('src', '');
+  } else if (selectedChannel === 2) {
+    track2.setAttribute('src', '');
+  } else if (selectedChannel === 3) {
+    track3.setAttribute('src', '');
+  } else if (selectedChannel === 4) {
+    track4.setAttribute('src', '');
+  } else {
+    track5.setAttribute('src', '');
+  }
 }
 
 /* Events */
 Template.Sound_Recorder_Page.events({
   /* Channel One Selected */
-  'click #channel_one': function(event, instance) {
-    instance.selectedChannel.set(1);
+  'click #channel_one': function() {
     selectedChannel = 1;
-    // console.log(event, "Selected channel " + instance.selectedChannel.get());
+    // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Two Selected */
-  'click #channel_two': function(event, instance) {
-    instance.selectedChannel.set(2);
+  'click #channel_two': function() {;
     selectedChannel = 2;
-    // console.log(event, "Selected channel " + instance.selectedChannel.get());
+    // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Three Selected */
-  'click #channel_three': function(event, instance) {
-    instance.selectedChannel.set(3);
+  'click #channel_three': function() {
     selectedChannel = 3;
-    // console.log(event, "Selected channel " + instance.selectedChannel.get());
+    // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Four Selected */
-  'click #channel_four': function(event, instance) {
-    instance.selectedChannel.set(4);
+  'click #channel_four': function() {
     selectedChannel = 4;
-    // console.log(event, "Selected channel " + instance.selectedChannel.get());
+    // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Five Selected */
-  'click #channel_five': function(event, instance) {
-    instance.selectedChannel.set(5);
+  'click #channel_five': function() {
     selectedChannel = 5;
-    // console.log(event, "Selected channel " + instance.selectedChannel.get());
+    // console.log("Selected channel " + selectedChannel);
   },
   /* Play Button Clicked */
-  'click #play': function(event, instance) {
+  'click #play': function() {
     track1.play();
     track2.play();
     track3.play();
@@ -140,7 +116,7 @@ Template.Sound_Recorder_Page.events({
     if (track1.readyState === 'ended') track1.play();
 */
   /* Pause Button Clicked */
-  'click #pause': function(event, instance) {
+  'click #pause': function() {
     track1.pause();
     track2.pause();
     track3.pause();
@@ -148,12 +124,12 @@ Template.Sound_Recorder_Page.events({
     track5.pause();
   },
   /* Record Button Clicked */
-  'click #record': function(event, instance) {
+  'click #record': function() {
     audioChunks = [];
     rec.start();
   },
   /* Stop Button Clicked */
-  'click #stop': function(event, instance) {
+  'click #stop': function() {
     rec.stop();
     track1.stop();
     track2.stop();
@@ -162,23 +138,29 @@ Template.Sound_Recorder_Page.events({
     track5.stop();
   },
   /* Clear Button Clicked */
-  'click #clear': function(event, instance) {
+  'click #clear': function() {
     deleteTrack(selectedChannel);
   },
 });
 
-// Get access to the mic and record
+/* Get Access to the Mic and Record */
 navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
   rec = new MediaRecorder(stream);
   rec.ondataavailable = e => {
     audioChunks.push(e.data);
-    if (rec.state == "inactive"){
+    if (rec.state == "inactive") {
       let blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
-      if (selectedChannel === 1) recordToTrack1(blob);
-      if (selectedChannel === 2) recordToTrack2(blob);
-      if (selectedChannel === 3) recordToTrack3(blob);
-      if (selectedChannel === 4) recordToTrack4(blob);
-      if (selectedChannel === 5) recordToTrack5(blob);
+      if (selectedChannel === 1) {
+        recordToTrack1(blob);
+      } else if (selectedChannel === 2) {
+        recordToTrack2(blob);
+      } else if (selectedChannel === 3) {
+        recordToTrack3(blob);
+      } else if (selectedChannel === 4) {
+        recordToTrack4(blob);
+      } else {
+        recordToTrack5(blob);
+      }
     }
   };
 }).catch(e=>console.log(e));
