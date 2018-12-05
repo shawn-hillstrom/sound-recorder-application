@@ -15,8 +15,8 @@ let selectedChannel = 1;
 
 function recordToTrack1(blob) {
   track1.src = URL.createObjectURL(blob);
-  track1.controls=true;
-  track1.autoplay=true;
+  track1.controls = true;
+  track1.autoplay = true;
   track1link.href = track1.src;
   track1link.download = 'mp3';
   track1link.innerHTML = 'download';
@@ -24,8 +24,8 @@ function recordToTrack1(blob) {
 
 function recordToTrack2(blob) {
   track2.src = URL.createObjectURL(blob);
-  track2.controls=true;
-  track2.autoplay=true;
+  track2.controls = true;
+  track2.autoplay = true;
   track2link.href = track1.src;
   track2link.download = 'mp3';
   track2link.innerHTML = 'download';
@@ -33,8 +33,8 @@ function recordToTrack2(blob) {
 
 function recordToTrack3(blob) {
   track3.src = URL.createObjectURL(blob);
-  track3.controls=true;
-  track3.autoplay=true;
+  track3.controls = true;
+  track3.autoplay = true;
   track3link.href = track1.src;
   track3link.download = 'mp3';
   track3link.innerHTML = 'download';
@@ -42,8 +42,8 @@ function recordToTrack3(blob) {
 
 function recordToTrack4(blob) {
   track4.src = URL.createObjectURL(blob);
-  track4.controls=true;
-  track4.autoplay=true;
+  track4.controls = true;
+  track4.autoplay = true;
   track4link.href = track1.src;
   track4link.download = 'mp3';
   track4link.innerHTML = 'download';
@@ -51,11 +51,19 @@ function recordToTrack4(blob) {
 
 function recordToTrack5(blob) {
   track5.src = URL.createObjectURL(blob);
-  track5.controls=true;
-  track5.autoplay=true;
+  track5.controls = true;
+  track5.autoplay = true;
   track5link.href = track1.src;
   track5link.download = 'mp3';
   track5link.innerHTML = 'download';
+}
+
+function deleteTrack(selectedChannel) {
+  if (selectedChannel === 1) track1.setAttribute('src', '');
+  if (selectedChannel === 2) track2.setAttribute('src', '');
+  if (selectedChannel === 3) track3.setAttribute('src', '');
+  if (selectedChannel === 4) track4.setAttribute('src', '');
+  if (selectedChannel === 5) track5.setAttribute('src', '');
 }
 
 /* On Created */
@@ -135,7 +143,7 @@ Template.Sound_Recorder_Page.events({
   },
   /* Clear Button Clicked */
   'click #clear': function(event, instance) {
-
+    deleteTrack(selectedChannel);
   },
 });
 
