@@ -134,7 +134,11 @@ Template.Sound_Recorder_Page.events({
   },
   /* Pause Button Clicked */
   'click #pause': function(event, instance) {
-
+    track1.pause();
+    track2.pause();
+    track3.pause();
+    track4.pause();
+    track5.pause();
   },
   /* Record Button Clicked */
   'click #record': function(event, instance) {
