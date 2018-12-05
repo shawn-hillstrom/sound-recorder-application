@@ -9,11 +9,12 @@
   box-shadow: none;
 }
 
-.howto.grid {
-  margin-top: 0px;
+.howtotab.tab {
+  border: 0;
+  box-shadow: none;
 }
 
-.aboutgrid.grid {
+.howtogrid.grid {
   padding-top: 75px;
   padding-bottom: 75px;
 }
@@ -21,10 +22,6 @@
 .footer.grid {
   background-color: #282828;
   color: whitesmoke;
-}
-
-.howto.grid {
-  background-color: #282828;
 }
 
 .indexmenu {
