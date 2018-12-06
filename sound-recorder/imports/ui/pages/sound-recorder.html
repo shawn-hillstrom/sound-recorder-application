@@ -1,78 +1,128 @@
-<template name="Sound_Recorder_Page" style="background-color:#282828">
+<template name="Sound_Recorder_Page">
   <div class="topbar"></div>
   <div class="ui five row changrid grid">
     <div class="ui row channelbutton button" id="channel1">
-
-      <div class="ui one wide left chanlabel column">1</div>
-
-        <button class="ui icon button" id="play1">
-            <i class="play icon"></i>
-        </button>
-        <button class="ui icon button" id="pause1">
-            <i class="pause icon"></i>
-        </button>
-      <a id="track1link"></a>
-
-      <div style="width: 100%;">
+      <div class="one wide column">
+        <div class="ui compact inverted fitted borderless secondary vertical chanlabel menu">
+          <div class="item">1</div>
+          <div class="item">
+            <div class="ui icon button" id="play1">
+              <i class="play icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui icon button" id="pause1">
+              <i class="pause icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <a class="ui icon button" id="track1link" href="file">
+              <i class="download icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fifteen wide column">
         <div id="wave1"></div>
       </div>
-
     </div>
-
     <div class="ui row channelbutton button" id="channel2">
-      <div class="ui one wide left chanlabel column">2</div>
-        <a id="track2link"></a>
-      <button class="ui icon button" id="play2">
-        <i class="play icon"></i>
-      </button>
-      <button class="ui icon button" id="pause2">
-        <i class="pause icon"></i>
-      </button>
-
-      <div style="width: 100%;">
+      <div class="one wide column">
+        <div class="ui compact inverted fitted borderless secondary vertical chanlabel menu">
+          <div class="item">2</div>
+          <div class="item">
+            <div class="ui icon button" id="play2">
+              <i class="play icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui icon button" id="pause2">
+              <i class="pause icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <a class="ui icon button" id="track2link" href="file">
+              <i class="download icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fifteen wide column">
         <div id="wave2"></div>
       </div>
     </div>
     <div class="ui row channelbutton button" id="channel3">
-      <div class="ui one wide left chanlabel column">3</div>
-        <a id="track3link"></a>
-
-      <button class="ui icon button" id="play3">
-        <i class="play icon"></i>
-      </button>
-      <button class="ui icon button" id="pause3">
-        <i class="pause icon"></i>
-      </button>
-
-      <div style="width: 100%;">
+      <div class="one wide column">
+        <div class="ui compact inverted fitted borderless secondary vertical chanlabel menu">
+          <div class="item">3</div>
+          <div class="item">
+            <div class="ui icon button" id="play3">
+              <i class="play icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui icon button" id="pause3">
+              <i class="pause icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <a class="ui icon button" id="track3link" href="file">
+              <i class="download icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fifteen wide column">
         <div id="wave3"></div>
       </div>
     </div>
     <div class="ui row channelbutton button" id="channel4">
-      <div class="ui one wide left chanlabel column">4</div>
-        <a id="track4link"></a>
-
-      <button class="ui icon button" id="play4">
-        <i class="play icon"></i>
-      </button>
-      <button class="ui icon button" id="pause4">
-        <i class="pause icon"></i>
-      </button>
-
-      <div style="width: 100%;">
+      <div class="one wide column">
+        <div class="ui compact inverted fitted borderless secondary vertical chanlabel menu">
+          <div class="item">4</div>
+          <div class="item">
+            <div class="ui icon button" id="play4">
+              <i class="play icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui icon button" id="pause4">
+              <i class="pause icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <a class="ui icon button" id="track4link" href="file">
+              <i class="download icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fifteen wide column">
         <div id="wave4"></div>
       </div>
     </div>
     <div class="ui row channelbutton button" id="channel5">
-      <div class="ui one wide left chanlabel column">5</div>
-        <a id="track5link"></a>
-      <button class="ui icon button" id="play5">
-        <i class="play icon"></i>
-      </button>
-      <button class="ui icon button" id="pause5">
-        <i class="pause icon"></i>
-      </button>
-      <div style="width: 100%;">
+      <div class="one wide column">
+        <div class="ui compact inverted fitted borderless secondary vertical chanlabel menu">
+          <div class="item">5</div>
+          <div class="item">
+            <div class="ui icon button" id="play5">
+              <i class="play icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui icon button" id="pause5">
+              <i class="pause icon"></i>
+            </div>
+          </div>
+          <div class="item">
+            <a class="ui icon button" id="track5link" href="file">
+              <i class="download icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fifteen wide column">
         <div id="wave5"></div>
       </div>
     </div>

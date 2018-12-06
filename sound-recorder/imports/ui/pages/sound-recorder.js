@@ -50,7 +50,6 @@ function recordToTrack(tracklink, blob, wavesurfer) {
   let  file = URL.createObjectURL(blob);
   tracklink.href = file;
   tracklink.download = 'mp3';
-  tracklink.innerHTML = 'download';
   wavesurfer.load(file);
 }
 
