@@ -72,15 +72,15 @@ function deleteTrack(selectedChannel) {
 /* Switch selectedChannel to newChannel */
 function switchActive(newChannel) {
   if (selectedChannel === 1) {
-    document.getElementById('channel1').style.backgroundColor = 'dimgray';
+    document.getElementById('channel1').style.backgroundColor = '#606060';
   } else if (selectedChannel === 2) {
-    document.getElementById('channel2').style.backgroundColor = 'dimgray';
+    document.getElementById('channel2').style.backgroundColor = '#606060';
   } else if (selectedChannel === 3) {
-    document.getElementById('channel3').style.backgroundColor = 'dimgray';
+    document.getElementById('channel3').style.backgroundColor = '#606060';
   } else if (selectedChannel === 4) {
-    document.getElementById('channel4').style.backgroundColor = 'dimgray';
+    document.getElementById('channel4').style.backgroundColor = '#606060';
   } else {
-    document.getElementById('channel5').style.backgroundColor = 'dimgray';
+    document.getElementById('channel5').style.backgroundColor = '#606060';
   }
   selectedChannel = newChannel;
 }
@@ -90,31 +90,31 @@ Template.Sound_Recorder_Page.events({
   /* Channel One Selected */
   'click #channel1': function() {
     switchActive(1);
-    document.getElementById('channel1').style.backgroundColor = 'silver';
+    document.getElementById('channel1').style.backgroundColor = '#707070';
     // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Two Selected */
   'click #channel2': function() {
     switchActive(2);
-    document.getElementById('channel2').style.backgroundColor = 'silver';
+    document.getElementById('channel2').style.backgroundColor = '#707070';
     // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Three Selected */
   'click #channel3': function() {
     switchActive(3);
-    document.getElementById('channel3').style.backgroundColor = 'silver';
+    document.getElementById('channel3').style.backgroundColor = '#707070';
     // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Four Selected */
   'click #channel4': function() {
     switchActive(4);
-    document.getElementById('channel4').style.backgroundColor = 'silver';
+    document.getElementById('channel4').style.backgroundColor = '#707070';
     // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Five Selected */
   'click #channel5': function() {
     switchActive(5);
-    document.getElementById('channel5').style.backgroundColor = 'silver';
+    document.getElementById('channel5').style.backgroundColor = '#707070';
     // console.log("Selected channel " + selectedChannel);
   },
   /* Play Button Clicked */
