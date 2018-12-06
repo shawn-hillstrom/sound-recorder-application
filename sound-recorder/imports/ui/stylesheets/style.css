@@ -56,6 +56,7 @@
 
 .channelbutton.button:hover {
   background-color: #808080 !important;
+  vertical-align: middle !important;
 }
 
 .circle.icon {
