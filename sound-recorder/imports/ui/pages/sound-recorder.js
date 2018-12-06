@@ -13,32 +13,32 @@ let wavesurfer5 = null;
 function createWaves () {
   wavesurfer1 = WaveSurfer.create({
     container: '#wave1', //string myContainer
-    waveColor: 'violet',
-    progressColor: 'purple'
+    waveColor: '#19fc05',
+    progressColor: '#0faa01'
   });
 
   wavesurfer2 = WaveSurfer.create({
     container: '#wave2', //string myContainer
-    waveColor: 'violet',
-    progressColor: 'purple'
+    waveColor: '#19fc05',
+    progressColor: '#0faa01'
   });
 
   wavesurfer3 = WaveSurfer.create({
     container: '#wave3', //string myContainer
-    waveColor: 'violet',
-    progressColor: 'purple'
+    waveColor: '#19fc05',
+    progressColor: '#0faa01'
   });
 
   wavesurfer4 = WaveSurfer.create({
     container: '#wave4', //string myContainer
-    waveColor: 'violet',
-    progressColor: 'purple'
+    waveColor: '#19fc05',
+    progressColor: '#0faa01'
   });
 
   wavesurfer5 = WaveSurfer.create({
     container: '#wave5', //string myContainer
-    waveColor: 'violet',
-    progressColor: 'purple'
+    waveColor: '#19fc05',
+    progressColor: '#0faa01'
   });
 }
 
