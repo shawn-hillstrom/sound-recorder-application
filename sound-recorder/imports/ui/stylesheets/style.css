@@ -49,13 +49,12 @@
   height: 20%;
   width: 100%;
   border: 2px solid black;
-  background-color: #606060;
+  background-color: #505050;
   text-align: left;
 }
 
 .channelbutton.button:hover {
   background-color: #808080 !important;
-  vertical-align: middle !important;
 }
 
 .circle.icon {

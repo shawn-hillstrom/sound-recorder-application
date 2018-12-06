@@ -71,15 +71,15 @@ function deleteTrack(selectedChannel) {
 /* Switch selectedChannel to newChannel */
 function switchActive(newChannel) {
   if (selectedChannel === 1) {
-    document.getElementById('channel1').style.backgroundColor = '#606060';
+    document.getElementById('channel1').style.backgroundColor = '#505050';
   } else if (selectedChannel === 2) {
-    document.getElementById('channel2').style.backgroundColor = '#606060';
+    document.getElementById('channel2').style.backgroundColor = '#505050';
   } else if (selectedChannel === 3) {
-    document.getElementById('channel3').style.backgroundColor = '#606060';
+    document.getElementById('channel3').style.backgroundColor = '#505050';
   } else if (selectedChannel === 4) {
-    document.getElementById('channel4').style.backgroundColor = '#606060';
+    document.getElementById('channel4').style.backgroundColor = '#505050';
   } else {
-    document.getElementById('channel5').style.backgroundColor = '#606060';
+    document.getElementById('channel5').style.backgroundColor = '#505050';
   }
   selectedChannel = newChannel;
 }
