@@ -1,5 +1,4 @@
 import { Template } from 'meteor/templating';
-import '/client/lib/semantic-ui/definitions/modules/progress.js';
 
 /* Variables */
 let audioChunks; // Variable to store recorded chunks of audio.
@@ -11,7 +10,6 @@ function recordToTrack(track, tracklink, blob) {
   track.autoplay = true;
   tracklink.href = track1.src;
   tracklink.download = 'mp3';
-  tracklink.innerHTML = 'download';
 }
 
 /* Delete a Track in Specified Channel */
@@ -37,7 +35,7 @@ Template.Sound_Recorder_Page.events({
     // console.log("Selected channel " + selectedChannel);
   },
   /* Channel Two Selected */
-  'click #channel_two': function() {;
+  'click #channel_two': function() {
     selectedChannel = 2;
     // console.log("Selected channel " + selectedChannel);
   },
@@ -63,14 +61,10 @@ Template.Sound_Recorder_Page.events({
     track3.play();
     track4.play();
     track5.play();
-    track1.addEventListener('stop', function(e) {
+    /*track1.addEventListener('stop', function(e) {
     track1.play();
-    });
+    });*/
     },
-  /* Track 1 ends
-
-    if (track1.readyState === 'ended') track1.play();
-*/
   /* Pause Button Clicked */
   'click #pause': function() {
     track1.pause();

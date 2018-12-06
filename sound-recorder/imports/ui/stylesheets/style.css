@@ -29,10 +29,6 @@
 }
 
 /* Sound Recorder Page Formatting */
-.audio {
-  height: 100%;
-}
-
 .bottombar.grid {
   background-color: #282828;
   height: 7%;
@@ -55,6 +51,7 @@
   height: 20%;
   width: 100%;
   border: 2px solid black;
+  vertical-align: middle !important;
 }
 
 .circle.icon {
