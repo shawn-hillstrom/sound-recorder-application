@@ -12,33 +12,33 @@ let wavesurfer5 = null;
 /* Wave Constructor */
 function createWaves () {
   wavesurfer1 = WaveSurfer.create({
-    container: '#wave1', //string myContainer
+    container: '#wave1', // string myContainer
     waveColor: '#19fc05',
-    progressColor: '#0faa01'
+    progressColor: '#0faa01',
   });
 
   wavesurfer2 = WaveSurfer.create({
-    container: '#wave2', //string myContainer
+    container: '#wave2', // string myContainer
     waveColor: '#19fc05',
-    progressColor: '#0faa01'
+    progressColor: '#0faa01',
   });
 
   wavesurfer3 = WaveSurfer.create({
-    container: '#wave3', //string myContainer
+    container: '#wave3', // string myContainer
     waveColor: '#19fc05',
-    progressColor: '#0faa01'
+    progressColor: '#0faa01',
   });
 
   wavesurfer4 = WaveSurfer.create({
-    container: '#wave4', //string myContainer
+    container: '#wave4', // string myContainer
     waveColor: '#19fc05',
-    progressColor: '#0faa01'
+    progressColor: '#0faa01',
   });
 
   wavesurfer5 = WaveSurfer.create({
-    container: '#wave5', //string myContainer
+    container: '#wave5', // string myContainer
     waveColor: '#19fc05',
-    progressColor: '#0faa01'
+    progressColor: '#0faa01',
   });
 }
 
@@ -47,7 +47,7 @@ Template.Sound_Recorder_Page.onRendered(function () {
 });
 
 function recordToTrack(tracklink, blob, wavesurfer) {
-  let  file = URL.createObjectURL(blob);
+  let file = URL.createObjectURL(blob);
   tracklink.href = file;
   tracklink.download = 'mp3';
   wavesurfer.load(file);
@@ -123,7 +123,7 @@ Template.Sound_Recorder_Page.events({
     wavesurfer3.play();
     wavesurfer4.play();
     wavesurfer5.play();
-    },
+  },
   /* Pause Button Clicked */
   'click #pause': function() {
     wavesurfer1.pause();
