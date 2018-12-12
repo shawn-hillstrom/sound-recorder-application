@@ -11,4 +11,4 @@ James Keirnan
 Shawn Hillstrom
 
 ## Current Status
-Implementation Phase
+Finished (for now)

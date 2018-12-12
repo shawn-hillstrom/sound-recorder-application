@@ -1,19 +1,13 @@
 import { Template } from 'meteor/templating';
-var exports = module.exports = {};
-
-/* export for tests */
-exports.closeServer = function(){
-  server.close();
-};
 
 /* Variables */
 let audioChunks; // Variable to store recorded chunks of audio.
 let selectedChannel = 0; // Variable to store the last clicked channel.
-let wavesurfer1 = null;
-let wavesurfer2 = null;
-let wavesurfer3 = null;
-let wavesurfer4 = null;
-let wavesurfer5 = null;
+let wavesurfer1 = null; // Wave form for channel 1.
+let wavesurfer2 = null; // Wave form for channel 2.
+let wavesurfer3 = null; // Wave form for channel 3.
+let wavesurfer4 = null; // Wave form for channel 4.
+let wavesurfer5 = null; // Wave form for channel 5.
 
 /* Wave Constructor */
 function createWaves () {
@@ -96,31 +90,31 @@ Template.Sound_Recorder_Page.events({
   'click #channel1': function() {
     switchActive(1);
     document.getElementById('channel1').style.backgroundColor = '#707070';
-    // console.log("Selected channel " + selectedChannel);
+    console.log("Selected channel " + selectedChannel);
   },
   /* Channel Two Selected */
   'click #channel2': function() {
     switchActive(2);
     document.getElementById('channel2').style.backgroundColor = '#707070';
-    // console.log("Selected channel " + selectedChannel);
+    console.log("Selected channel " + selectedChannel);
   },
   /* Channel Three Selected */
   'click #channel3': function() {
     switchActive(3);
     document.getElementById('channel3').style.backgroundColor = '#707070';
-    // console.log("Selected channel " + selectedChannel);
+    console.log("Selected channel " + selectedChannel);
   },
   /* Channel Four Selected */
   'click #channel4': function() {
     switchActive(4);
     document.getElementById('channel4').style.backgroundColor = '#707070';
-    // console.log("Selected channel " + selectedChannel);
+    console.log("Selected channel " + selectedChannel);
   },
   /* Channel Five Selected */
   'click #channel5': function() {
     switchActive(5);
     document.getElementById('channel5').style.backgroundColor = '#707070';
-    // console.log("Selected channel " + selectedChannel);
+    console.log("Selected channel " + selectedChannel);
   },
   /* Play Button Clicked */
   'click #play': function() {
@@ -141,16 +135,32 @@ Template.Sound_Recorder_Page.events({
   /* Record Button Clicked */
   'click #record': function() {
     audioChunks = [];
-    rec.start();
+    if (selectedChannel !== 0) {
+      if (rec.state !== 'recording') {
+        rec.start();
+      } else {
+        console.log("Recording cannot be started");
+      }
+    } else {
+      console.log("No channel has been selected");
+    }
   },
   /* Stop Button Clicked */
   'click #stop': function() {
-    wavesurfer1.stop();
-    wavesurfer2.stop();
-    wavesurfer3.stop();
-    wavesurfer4.stop();
-    wavesurfer5.stop();
-    rec.stop();
+    if (selectedChannel !== 0) {
+      wavesurfer1.stop();
+      wavesurfer2.stop();
+      wavesurfer3.stop();
+      wavesurfer4.stop();
+      wavesurfer5.stop();
+      if (rec.state === "recording") {
+        rec.stop();
+      } else {
+        console.log("Recording cannot be stopped");
+      }
+    } else {
+      console.log("No channel has been selected");
+    }
   },
   /* Clear Button Clicked */
   'click #clear': function() {
@@ -217,7 +227,7 @@ navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
       } else if (selectedChannel === 5){
         recordToTrack(track5link, blob, wavesurfer5);
       } else {
-        //console.log("Channel has not been selected.");
+        console.log("Channel has not been selected.");
       }
     }
   };
