@@ -1,4 +1,9 @@
 var assert = chai.assert;
+//var request = require("request"),
+//    assert = require('assert'),
+//    base_url = "http://localhost:3000";
+
+//var assert = chai.assert;
 /* eslint-env mocha, chai */
 /* global chai, sound-recorder */
 
@@ -8,12 +13,15 @@ var assert = chai.assert;
 
 describe('createWaves', function () {
     it('waveContainer1', function() {
-        assert(wavesurfer1).to.have.container('#wave1');
+        request.get(base_url, function(error, response, body) {
+            assert(wavesurfer1).to.have.container('#wave1');
+            done();
+        });
     });
-    it('waveColor1', function() {
-        assert(wavesurfer1).to.have.waveColor('#19fc05');
+    it('should have waveColor #19fc05', function() {
+        assert.equal(wavesurfer1.waveColor, '#19fc05');
     });
-    it('waveProgress1', function() {
+    it('should have waveProgress #19fc05', function() {
         assert(wavesurfer1).to.have.progressColor('#0faa01');
     });
 });

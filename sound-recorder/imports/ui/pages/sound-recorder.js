@@ -1,4 +1,10 @@
 import { Template } from 'meteor/templating';
+var exports = module.exports = {};
+
+/* export for tests */
+exports.closeServer = function(){
+  server.close();
+};
 
 /* Variables */
 let audioChunks; // Variable to store recorded chunks of audio.
